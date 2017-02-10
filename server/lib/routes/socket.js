@@ -20,7 +20,7 @@ module.exports = function (socket) {
     camera.read(function(err, im) {
       if (err) throw err;
 
-      im.detectObject('./node_modules/opencv/data/haarcascade_frontalface_alt2.xml', {}, function(err, faces) {
+      im.detectObject('/output/cascade.xml', {}, function(err, faces) {
         if (err) throw err;
 
         for (var i = 0; i < faces.length; i++) {
